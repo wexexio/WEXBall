@@ -64,8 +64,7 @@ async function verification(hash) {
 
 	// hash to List
 	const list = await hashToList(hash, maxNumber);
-	// 해시를 1차 계산한 목록
-	console.log(`Hash To Number : ${list}`); // 화면표시 1
+	console.log(`Hash To Number : ${list}`);
 
 	const win = [];
 	const { winning, multi } = await lotteryCacl(
@@ -75,7 +74,7 @@ async function verification(hash) {
 		maxNumber,
 		winNumber
 	);
-	console.log(`duplicate number : ${multi}`); // 화면표시 2
+	console.log(`calculate number : ${winning}`);
 
 	const bonus = winning[winNumber - 1];
 	const nubmers = winning.splice(0, winning.length - 1);
@@ -91,5 +90,5 @@ async function verification(hash) {
 }
 
 verification(
-	"0x15ff947a70a9ed49be97b886cd03c173fb916f76fac01039b47cfcb5e33ae664"
+	"0x5275cdb9372f5402778776d80301e0160c1cadae462400a80f1f0212928d04ae"
 );
